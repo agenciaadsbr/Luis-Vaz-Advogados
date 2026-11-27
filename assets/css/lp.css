@@ -77,3 +77,8 @@ section[id],#form{scroll-margin-top:16px}
   .f-btn{font-size:15px;padding:0 16px}
   #como-funciona li > div:first-child{gap:14px}
 }
+
+/* Cards de situações */
+.sit{transition:transform .25s ease,box-shadow .25s ease}
+.sit:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(16,16,16,.08)}
+@media (max-width:720px){.sit{flex-direction:column}}
