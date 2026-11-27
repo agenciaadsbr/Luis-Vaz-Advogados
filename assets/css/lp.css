@@ -1,0 +1,79 @@
+/* LP Luis Vaz Advogados — Direito Bancário */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#101010;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:#FFFFFF}a:hover{color:#F2F2F2}
+h1,h2,h3,p{text-wrap:pretty}
+:focus-visible{outline:2px solid #25D366;outline-offset:3px}
+section[id],#form{scroll-margin-top:16px}
+
+.cta{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.28)}
+.cta:active{transform:translateY(0)}
+.zoom img{transition:transform .8s ease}.zoom:hover img{transform:scale(1.04)}
+.navl:hover{color:#FFFFFF!important}
+
+/* Fundos com parallax */
+.px{background-color:#101010;background-size:cover;background-position:center;background-attachment:fixed}
+.px-hero{background-image:url(/assets/img/hero.webp)}
+.px-steps{background-image:url(/assets/img/arquitetura.webp)}
+.px-docs{background-image:url(/assets/img/docs.webp)}
+.px-form{background-image:url(/assets/img/predio.webp)}
+@media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
+
+/* Perguntas frequentes */
+.faq{background:#FFFFFF;border-radius:18px;padding:0 24px}
+.faq summary{list-style:none;cursor:pointer;min-height:68px;padding:20px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;font-family:Inter,sans-serif;font-size:17px;font-weight:500;color:#101010}
+.faq summary::-webkit-details-marker{display:none}
+.faq-i{position:relative;width:32px;height:32px;border-radius:10px;border:1px solid #101010;flex:0 0 auto}
+.faq-i::before,.faq-i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:#101010;transform:translate(-50%,-50%);transition:transform .25s ease}
+.faq-i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq[open] .faq-i::after{transform:translate(-50%,-50%) rotate(0)}
+.faq p{margin:0;padding:0 0 24px;font-size:15px;line-height:1.7;color:#292929}
+
+/* Formulário */
+.fld{display:flex;flex-direction:column;gap:8px;width:100%}
+.fld label{font-size:13px;font-weight:600;letter-spacing:.04em;color:#101010}
+.fld input{width:100%;height:52px;border-radius:12px;border:1px solid #888888;padding:0 16px;font-size:16px;font-family:Inter,sans-serif;color:#101010;background:#FFFFFF;transition:border-color .2s}
+.fld input:focus{outline:2px solid #25D366;outline-offset:2px;border-color:#101010}
+.fld-err{display:none;font-size:13px;color:#B3261E}
+.fld.bad input{border-color:#B3261E}
+.fld.bad .fld-err{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.f-btn{width:100%;min-height:56px;border:0;border-radius:12px;background:#25D366;color:#101010;font-family:Inter,sans-serif;font-size:16px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px}
+.f-btn[disabled]{opacity:.75;cursor:progress;transform:none;box-shadow:none}
+.f-btn.sending svg{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.f-msg{display:none;margin:0;font-size:13px;line-height:1.5;color:#B3261E;background:#FDECEA;border-radius:10px;padding:12px 14px}
+.f-msg.on{display:block}
+.f-msg a{color:#101010;font-weight:600}
+
+/* Revelação ao rolar */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .cta,.zoom img{transition:none}
+  .px{background-attachment:scroll}
+}
+
+/* Mobile: tudo centralizado */
+@media (max-width:720px){
+  .lp,.lp *{text-align:center!important}
+  .lp div,.lp header,.lp nav,.lp ul,.lp ol,.lp li,.lp article,.lp form,.lp button,.lp summary{justify-content:center!important;align-items:center!important}
+  .lp a{align-self:center!important;justify-content:center!important}
+  .lp .fld{align-items:stretch!important}
+  .lp .fld label,.lp .fld-err{align-self:center}
+  .m-hide{display:none!important}
+  .m-pad{padding-top:64px!important;padding-bottom:64px!important}
+  .faq summary{flex-direction:column;gap:12px}
+}
+
+/* Ajustes finos no celular */
+.f-btn svg{flex:0 0 auto}
+@media (max-width:720px){
+  .f-btn{font-size:15px;padding:0 16px}
+  #como-funciona li > div:first-child{gap:14px}
+}

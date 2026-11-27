@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Obrigado | Luis Vaz Advogados</title>
+<meta name="theme-color" content="#101010">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#101010;color:#FFFFFF;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#FFFFFF}
+:focus-visible{outline:2px solid #25D366;outline-offset:3px}
+.cta{transition:transform .2s ease,box-shadow .2s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.28)}
+.ring{position:relative;width:104px;height:104px;display:flex;align-items:center;justify-content:center}
+.ring svg.track{position:absolute;inset:0;transform:rotate(-90deg)}
+.ring circle.bar{transition:stroke-dashoffset linear}
+.fade{opacity:0;transform:translateY(14px);animation:in .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes in{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}.ring circle.bar{transition:none}}
+</style>
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/tracking.js"></script>
+</head>
+<body>
+<div style="position:relative; min-height:100vh; min-height:100dvh; overflow:hidden; display:flex; flex-direction:column">
+  <img src="/assets/img/hero.webp" alt="" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.14">
+  <header style="position:relative; display:flex; justify-content:center; padding:28px 24px 0">
+    <a href="/" aria-label="Voltar para a página inicial"><img src="/assets/img/logo-branco.png" alt="Luis Vaz Advogados" width="661" height="203" style="width:170px; height:auto; display:block"></a>
+  </header>
+  <main style="position:relative; flex:1; display:flex; align-items:center; justify-content:center; padding:40px 24px 64px">
+    <div style="width:100%; max-width:560px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px">
+      <div class="ring fade" aria-hidden="true">
+        <svg class="track" width="104" height="104" viewBox="0 0 104 104"><circle cx="52" cy="52" r="48" fill="none" stroke="#292929" stroke-width="2"></circle><circle class="bar" id="bar" cx="52" cy="52" r="48" fill="none" stroke="#25D366" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="301.6" stroke-dashoffset="301.6"></circle></svg>
+        <span id="ct" style="font-family:Manrope,sans-serif; font-weight:700; font-size:36px; font-variant-numeric:tabular-nums">4</span>
+      </div>
+      <h1 class="fade" style="margin:0; font-family:Manrope,sans-serif; font-weight:600; letter-spacing:-.03em; font-size:clamp(32px,6vw,48px); line-height:1.08; animation-delay:.15s"><span id="saud">Recebemos</span> sua solicitação.</h1>
+      <p class="fade" id="st" role="status" style="margin:0; font-size:17px; line-height:1.6; color:#F2F2F2; animation-delay:.3s">Estamos abrindo o WhatsApp do escritório para você continuar o atendimento.</p>
+      <a class="cta fade" id="wa" href="#" rel="noopener" style="border-radius:12px; text-decoration:none; background:#25D366; color:#101010; padding:18px 28px; font-weight:600; font-size:16px; min-height:56px; display:inline-flex; align-items:center; gap:12px; animation-delay:.45s">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.6L3 21z"></path><path d="M9 9.5c.3 2.5 2.5 4.7 5 5l1.2-1.2 2 1-.6 1.6c-3.8.4-8.4-4.2-8-8l1.6-.6 1 2L9 9.5z"></path></svg>
+        Abrir o WhatsApp agora
+      </a>
+      <div class="fade" style="width:100%; display:flex; flex-direction:column; gap:8px; border-top:1px solid #292929; padding-top:22px; font-size:13px; color:#888888; line-height:1.6; animation-delay:.6s">
+        <span>Tenha em mãos os documentos do seu caso para a análise.</span>
+        <span>Atendimento online · Sul e Sudeste, exceto RJ</span>
+      </div>
+      <a href="/" class="fade" style="font-size:13px; color:#888888; animation-delay:.7s">Voltar para a página</a>
+    </div>
+  </main>
+  <footer style="position:relative; border-top:1px solid #292929">
+    <p style="max-width:1200px; margin:0 auto; padding:18px 24px; font-size:12px; line-height:1.6; color:#888888; text-align:center">Conteúdo informativo. Cada situação depende de análise individual; não há garantia de resultado.</p>
+  </footer>
+</div>
+<script>
+(function () {
+  var C = window.LP_CONFIG || {};
+  var nome = (window.LP && window.LP.read('lp_lead_nome')) || '';
+  if (nome) document.getElementById('saud').textContent = 'Obrigado, ' + nome + '. Recebemos';
+
+  var num = String(C.WHATSAPP_NUMBER || '').replace(/\D/g, '');
+  var text = String(C.WHATSAPP_MESSAGE || '').replace('{nome}', nome || '').replace(/\s+/g, ' ').trim();
+  var url = 'https://wa.me/' + num + '?text=' + encodeURIComponent(text);
+  var ready = num.length >= 12;
+  var wa = document.getElementById('wa');
+  wa.href = ready ? url : '#';
+
+  // Evento de conversão (Pixel), uma vez por lead
+  var leadId = window.LP && window.LP.read('lp_lead_id');
+  if (window.LP && leadId && window.LP.read('lp_pixel_sent') !== leadId) {
+    window.LP.store('lp_pixel_sent', leadId);
+    window.LP.pixel('Lead');
+  }
+
+  var secs = Math.max(1, parseInt(C.REDIRECT_SECONDS, 10) || 4), left = secs;
+  var ct = document.getElementById('ct'), st = document.getElementById('st'), bar = document.getElementById('bar');
+  ct.textContent = left;
+  requestAnimationFrame(function () {
+    bar.style.transitionDuration = secs + 's';
+    requestAnimationFrame(function () { bar.style.strokeDashoffset = '0'; });
+  });
+  var t = setInterval(function () {
+    left -= 1;
+    if (left <= 0) {
+      clearInterval(t);
+      ct.textContent = '✓';
+      if (ready) { st.textContent = 'Abrindo o WhatsApp… Se não abrir, toque no botão abaixo.'; location.href = url; }
+      else st.textContent = 'Toque no botão para abrir o WhatsApp.';
+      return;
+    }
+    ct.textContent = left;
+  }, 1000);
+})();
+</script>
+</body>
+</html>
