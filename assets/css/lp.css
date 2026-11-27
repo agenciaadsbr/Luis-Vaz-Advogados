@@ -16,9 +16,9 @@ section[id],#form{scroll-margin-top:16px}
 
 /* Fundos com parallax */
 .px{background-color:#101010;background-size:cover;background-position:center;background-attachment:fixed}
-.px-hero{background-image:url(/assets/img/hero.webp)}
-.px-steps{background-image:url(/assets/img/arquitetura.webp)}
-.px-form{background-image:url(/assets/img/predio.webp)}
+.px-hero{background-image:url(/assets/img/hero-c.webp)}
+.px-steps{background-image:url(/assets/img/arquitetura-c.webp)}
+.px-form{background-image:url(/assets/img/predio-c.webp)}
 @media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
 
 /* Perguntas frequentes */
@@ -71,6 +71,14 @@ section[id],#form{scroll-margin-top:16px}
   .lp ul{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important;justify-items:start;align-items:flex-start!important;grid-template-columns:1fr!important}
   .lp ul li,.lp ul li *{text-align:left!important}
   .lp ul li{justify-content:flex-start!important}
+  /* topo mais compacto no mobile */
+  .hero-in{padding-top:118px!important;padding-bottom:24px!important;gap:22px!important}
+  #topo{min-height:0!important}
+  /* "Para quem": alinhado à esquerda */
+  .lp .pq{justify-content:flex-start!important;align-items:center!important;column-gap:16px!important;row-gap:12px!important}
+  .lp .pq,.lp .pq *{text-align:left!important}
+  .lp .pq h3{flex:1 1 200px!important}
+  .lp .pq > span:last-child{flex:1 1 100%!important}
   .lp .faq summary{justify-content:space-between!important;gap:16px}
   .faq summary > span:first-child{flex:1;min-width:0}
 }
