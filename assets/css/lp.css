@@ -16,9 +16,9 @@ section[id],#form{scroll-margin-top:16px}
 
 /* Fundos com parallax */
 .px{background-color:#101010;background-size:cover;background-position:center;background-attachment:fixed}
-.px-hero{background-image:url(/assets/img/hero-c.webp)}
+.px-hero{background-image:url(/assets/img/hero-c2.webp)}
 .px-steps{background-image:url(/assets/img/arquitetura-c.webp)}
-.px-form{background-image:url(/assets/img/predio-c.webp)}
+.px-form{background-image:url(/assets/img/predio-c2.webp)}
 @media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
 
 /* Perguntas frequentes */
@@ -71,6 +71,9 @@ section[id],#form{scroll-margin-top:16px}
   .lp ul{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important;justify-items:start;align-items:flex-start!important;grid-template-columns:1fr!important}
   .lp ul li,.lp ul li *{text-align:left!important}
   .lp ul li{justify-content:flex-start!important}
+  .lp .bento>*{flex-direction:column!important;text-align:center!important}
+  .bento .b-img{min-height:300px!important}
+  .lp .foco{padding:28px!important}
   /* topo mais compacto no mobile */
   .hero-in{padding-top:118px!important;padding-bottom:24px!important;gap:22px!important}
   #topo{min-height:0!important}
@@ -88,6 +91,16 @@ section[id],#form{scroll-margin-top:16px}
 @media (max-width:720px){
   .f-btn{font-size:15px;padding:0 16px}
   #como-funciona li > div:first-child{gap:14px}
+}
+
+/* Foco de atuação e bento da experiência */
+.foco{transition:transform .3s ease,border-color .3s ease}
+.foco:hover{transform:translateY(-4px);border-color:rgba(37,211,102,.35)!important}
+@media (max-width:1024px){
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .bento>*{grid-column:span 2!important;grid-row:auto!important}
+  .bento .b-img{min-height:360px!important}
+  .bento{grid-auto-rows:auto!important}
 }
 
 /* Cards de situações */
