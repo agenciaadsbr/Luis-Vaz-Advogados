@@ -16,7 +16,7 @@ section[id],#form{scroll-margin-top:16px}
 
 /* Fundos com parallax */
 .px{background-color:#101010;background-size:cover;background-position:center;background-attachment:fixed}
-.px-hero{background-image:url(/assets/img/hero-c2.webp)}
+.px-hero{background-image:url(/assets/img/hero-c3.webp)}
 .px-steps{background-image:url(/assets/img/arquitetura-c.webp)}
 .px-form{background-image:url(/assets/img/predio-c2.webp)}
 @media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
