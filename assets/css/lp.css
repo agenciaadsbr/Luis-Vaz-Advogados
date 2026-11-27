@@ -22,7 +22,7 @@ section[id],#form{scroll-margin-top:16px}
 @media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
 
 /* Perguntas frequentes */
-.faq{background:#FFFFFF;border-radius:18px;padding:0 24px}
+.faq{width:100%;box-sizing:border-box;background:#FFFFFF;border-radius:18px;padding:0 24px}
 .faq summary{list-style:none;cursor:pointer;min-height:68px;padding:20px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;font-family:Inter,sans-serif;font-size:17px;font-weight:500;color:#101010}
 .faq summary::-webkit-details-marker{display:none}
 .faq-i{position:relative;width:32px;height:32px;border-radius:10px;border:1px solid #101010;flex:0 0 auto}
@@ -67,7 +67,8 @@ section[id],#form{scroll-margin-top:16px}
   .lp .fld label,.lp .fld-err{align-self:center}
   .m-hide{display:none!important}
   .m-pad{padding-top:64px!important;padding-bottom:64px!important}
-  .faq summary{flex-direction:column;gap:12px}
+  .lp .faq summary{justify-content:space-between!important;gap:16px}
+  .faq summary > span:first-child{flex:1;min-width:0}
 }
 
 /* Ajustes finos no celular */
