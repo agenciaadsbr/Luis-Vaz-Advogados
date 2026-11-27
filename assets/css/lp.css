@@ -18,7 +18,6 @@ section[id],#form{scroll-margin-top:16px}
 .px{background-color:#101010;background-size:cover;background-position:center;background-attachment:fixed}
 .px-hero{background-image:url(/assets/img/hero.webp)}
 .px-steps{background-image:url(/assets/img/arquitetura.webp)}
-.px-docs{background-image:url(/assets/img/docs.webp)}
 .px-form{background-image:url(/assets/img/predio.webp)}
 @media (hover:none),(max-width:1024px){.px{background-attachment:scroll}}
 
