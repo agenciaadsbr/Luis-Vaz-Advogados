@@ -68,7 +68,7 @@ section[id],#form{scroll-margin-top:16px}
   .m-hide{display:none!important}
   .m-pad{padding-top:64px!important;padding-bottom:64px!important}
   /* listas com ícone: bloco centralizado, itens alinhados à esquerda */
-  .lp ul{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important;justify-items:start;align-items:flex-start!important}
+  .lp ul{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important;justify-items:start;align-items:flex-start!important;grid-template-columns:1fr!important}
   .lp ul li,.lp ul li *{text-align:left!important}
   .lp ul li{justify-content:flex-start!important}
   .lp .faq summary{justify-content:space-between!important;gap:16px}
